@@ -1,46 +1,50 @@
-# Getting Started with Create React App
+# Reservation - Frontend
+
+This project is a home assessment for the Henry Meds frontend application.
+
+## Install Development Environment
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+```sh
+# node -v 18
+npm install
+npm run start
+```
 
-In the project directory, you can run:
+## Technologies
 
-### `npm start`
+TypeScript, React, React Router, MUI
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Scenario
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Henry has two kinds of users, **providers** and **clients**. Providers have a schedule where they are available to see clients. Clients want to book time, in advance, on that schedule.
 
-### `npm test`
+**Providers**
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Have an id.
+- Have a schedule
+  - On Friday the 13th of August, I want to work between 8am and 3pm.
 
-### `npm run build`
+**Clients**
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Have an id.
+- Want to reserve a 15m time ‘slot’ from a providers schedule.
+  - Reservations expire after 30 mins if not confirmed.
+  - Reservations must be made at least 24 hours in advance.
+- Want to be able to confirm a reservation.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Task
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Build the front end for a mobile web application that covers as many of the following as possible in the time allotted:
 
-### `npm run eject`
+- Allows providers to submit times they’d like to work on the schedule.
+- Allows clients to list available slots.
+- Allows clients to reserve an available slot.
+- Allows clients to confirm their reservation.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Use whichever toolset you think is reasonable!
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Assumptions
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+Assume the API is being worked on in parallel and for the time being you could create a mock API or just hardcoded data from a file.
